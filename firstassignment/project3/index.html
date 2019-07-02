@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function formSubmit() {
+    document.forms["myForm"].submit();
+}
+</script>
+</head>
+<body onload = nameFunction()>
+
+<h1>My First HTML/JS App</h1>
+
+<p id="demo"></p>
+
+<script>
+function nameFunction() {
+  var txt;
+  person = prompt("Enter your name:", "Generic User");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  } else {
+    txt = "User: " + person;
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+<form name="myForm">
+Date of Birth (dd/mm/yyyy): <input type="textbox" id="dbirth" value="" width="48" maxlength="2" size="2">  <input type="textbox" id="mbirth" value="" maxlength="2" size="2">  <input type="textbox" id="ybirth" value="" width="48" maxlength="4" size="4"><br>
+City: <input type="textbox" id="city" value=""><br>
+State: <input type="textbox" id="state" value="" maxlength="2" size="2"><br>
+Zip: <input type="textbox" id="zip" value="" maxlength="5" size="5"><br>
+Hobby: <input type="textbox" id="hobby" value=""><br>
+<br>
+<button type="reset" value="Reset">Reset</button>
+
+<button type="button" form="myForm" onclick="alert('User: ' + person + '\nDate of Birth: (' + dbirth.value + '/'+ mbirth.value + '/' +  ybirth.value + ')\nCity: ' + city.value + '\nState: ' + state.value + '\nZip: ' + zip.value + '\nHobby: ' + hobby.value    )">Submit</button>
+<br>
+<br>
+<input type="button" onclick="myFunction()" value="Reset Page">
+</form>
+
+</body>
+</html>

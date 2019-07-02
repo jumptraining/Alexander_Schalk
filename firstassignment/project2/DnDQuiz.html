@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Drag and Drop Quiz Game</title>
+		<link rel='stylesheet' href='css/reset.css' />
+		<link rel='stylesheet' href='css/app.css'/>
+		<script type='text/javascript' src='js/framework.js'></script>
+		<script type='text/javascript' src="js/app.js"></script>
+		<script type='text/javascript' src="js/functions.js"></script>
+	</head>
+	<body>
+		<div id='container'>
+			<div id='middle'>
+				<div id='innerContainer'>
+					<div id='content'>
+						<div class='header'>
+							<div class='header_row'>
+								<div id='title'></div>
+							</div>
+							<div class='clearfix'></div>						
+							<div class='headerRow'>
+								<div class='headerLeft'>
+								
+									<button class="block" id="undo">Undo</button>		
+									
+									<div id='score'>Score Message Center</div>
+									<p id="message001"></p>									
+									<p hidden><text id='score001'>0</text></p>
+								</div>
+								
+								<div class='headerRight'>	
+								<!--
+								<section id="stopWatch">
+									<p id="timer"> 00:00:00 </p>
+									<button id="start"> Start </button> <button id="stop"> Stop </button> 
+									<p id="fulltime"> </p>
+								</section>
+								-->
+								
+									<button class="block" id="timerControl">Play</button> 
+									<div>Timer:</div>
+									<div id = "timerDisplay">00:00:00</div>
+
+								</div>
+								
+							</div>
+							<div class='clearfix'></div>						
+						</div>
+						<div id="gameArea">
+							<div id="termsContainer">
+								<!--dragStart event rearranged for definition matching-->	
+								<div class='termWidget' ondrop="drop001(event)" id='termWidget1' linkid='1'>
+									<text ondragstart="dragStart003(event)" draggable="true" id="target003">CLASS</text>
+								</div>								
+
+								<div class='termWidget' ondrop="drop001(event)" id='termWidget1' linkid='1'>
+									<text ondragstart="dragStart002(event)" draggable="true" id="target002">CONSTRUCTOR</text>
+								</div>							
+	
+								<div class='termWidget' ondrop="drop001(event)" id='termWidget1' linkid='1'>
+									<text ondragstart="dragStart005(event)" draggable="true" id="target005">ABSTRACTION</text>
+								</div>								
+	
+								<div class='termWidget' ondrop="drop001(event)" id='termWidget1' linkid='1'>
+									<text ondragstart="dragStart001(event)" draggable="true" id="target001">INHERITANCE</text>
+								</div>								
+	
+								<div class='termWidget' ondrop="drop001(event)" id='termWidget1' linkid='1'>
+									<text ondragstart="dragStart004(event)" draggable="true" id="target004">FALSEY VALUES</text>
+								</div>								
+		
+								</div>
+							<div id="definitionsContainer">																
+								<div class='definitionWidget' unselectable="on" id='definitionWidget1' expectedLinkId='1' droppedLinkId='0'>
+									<!--The following line was modified/added-->
+									<div class='droppedTerm' ondrop="drop006(event)" ondragover="allowDrop001(event)" id="place001">Drag and Drop Here</div>
+									<div class='definitionText' unselectable="on">when one class shares the structure and behavior defined in another class</div>
+									<div class='clearfix_no_margin'></div>
+								</div>
+								
+								<div class='definitionWidget' unselectable="on" id='definitionWidget2' expectedLinkId='2' droppedLinkId='0'>
+									<!--The following line was modified/added-->
+									<div class='droppedTerm' ondrop="drop007(event)" ondragover="allowDrop001(event)" id="place002">Drag and Drop Here</div>
+									<div class='definitionText' unselectable="on"> a method used to initialize the state of an object</div>
+									<div class='clearfix_no_margin'></div>
+								</div>
+								
+								<div class='definitionWidget' unselectable="on" id='definitionWidget3' expectedLinkId='3' droppedLinkId='0'>
+									<!--The following line was modified/added-->
+									<div class='droppedTerm' ondrop="drop008(event)" ondragover="allowDrop001(event)" id="place003">Drag and Drop Here</div>
+									<div class='definitionText' unselectable="on">the design or blueprint that describes the details of objects</div>
+									<div class='clearfix_no_margin'></div>
+								</div>
+							
+								<div class='definitionWidget' unselectable="on" id='definitionWidget4' expectedLinkId='4' droppedLinkId='0'>
+									<!--The following line was modified/added-->
+									<div class='droppedTerm' ondrop="drop009(event)" ondragover="allowDrop001(event)" id="place004">Drag and Drop Here</div>
+									<div class='definitionText' unselectable="on">undefined , null , NaN , 0 , "", and false</div>
+									<div class='clearfix_no_margin'></div>
+								</div>
+								
+								<div class='definitionWidget' unselectable="on" id='definitionWidget5' expectedLinkId='5' droppedLinkId='0'>
+									<!--The following line was modified/added-->
+									<div class='droppedTerm' ondrop="drop010(event)" ondragover="allowDrop001(event)" id="place005">Drag and Drop Here</div>
+									<div class='definitionText' unselectable="on">showing only the necessary details to the client of an object</div>
+									<div class='clearfix_no_margin'></div>
+								</div>
+
+							</div>
+						</div>					
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
